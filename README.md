@@ -4,4 +4,4 @@ I'm trying to learn how to code HTML/CSS/Javascript and the like so I made this 
 
 Dialetheism is a radical rejection of [classical logic](https://plato.stanford.edu/entries/logic-classical/), opposing the standard and oppressive view that all contradictions are false. You can join the resistance movement against classical logic by visiting this website and annoying your family in friends with long-winded rants about the evils of hyper-consistency in our formal systems.
 
-That is all for now. Have fun checking out this website. Goodbye.
+Check out the [official git documentation](https://git-scm.com/).
