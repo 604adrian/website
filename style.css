@@ -1,3 +1,4 @@
+/* GLOBAL */
 body {
   background-color: #3c4042;
   color: #f5f5dc;
@@ -32,6 +33,19 @@ footer {
   text-align: center;
 }
 
+footer p {
+  padding-bottom: 10px;
+}
+
+footer a {
+  color: #d3d3d3;
+}
+
+/* OTHER STYLES */
+.internal-links {
+  color: #d3d3d3;
+}
+
 .main-text {
   color: #3c4042; /* Change text color to match body background */
   background-color: #f5f5dc; /* Change background color to contrast body background */
@@ -45,6 +59,11 @@ footer {
 
 #index .main-text {
   margin-top: 170
+}
+
+/* Makes an exception to the rule that links in the main body change color after being visited */
+#index .main-text a:visited {   
+  color: #d66853;
 }
 
 .main-text h2 {
@@ -62,6 +81,10 @@ footer {
   text-decoration: underline;
 }
 
+.main-text a:visited {
+  color: purple;
+}
+
 @media screen and (max-width: 600px) {
   .main-text {
     width: 100%;
@@ -69,11 +92,48 @@ footer {
 }
 
 
-/* HAMBURGER MENU */
-body {
-  /* Your existing styles go here */
+/* IMAGES */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2rem;
 }
 
+.image-container {
+ position: relative; /* positions captions relative to image */
+}
+
+.image-container:hover img,
+.image-container:focus img {
+  filter: brightness (50%);   /* Makes the image darker on hover and focus */
+}
+
+.caption {
+  position: absolute;
+  bottom: 0;
+  left; 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px;
+  box-sizing: border-box;
+  opacity: 0;  /* Hides the caption by default */
+  transition: opacity 0.3s;   /* Adds a smooth transition effect */
+  margin-top: -100%;  /* Negative mnargin to overlay the caption on top of the image */
+}
+
+.caption a:hover {
+  color: #ffffff;
+}
+.image-container:hover .caption,
+.image-containter:focus, caption {
+  opacity: 1; /* makes the caption visible on hover and focus */
+}
+
+
+/* HAMBURGER MENU */
 header {
   position: fixed;
   width: 100%;
