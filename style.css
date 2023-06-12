@@ -1,0 +1,126 @@
+body {
+  background-color: #3c4042;
+  color: #f5f5dc;
+  font-family: Arial, sans-serif;
+  padding: 0; /* Remove padding from body */
+  margin: 0; /* Remove default browser margin */
+}
+
+header {
+  background-color: #d66853;
+  padding: 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+}
+
+header h1 {
+  text-align: center;
+  color: #f5f5dc;
+}
+
+header a {
+  text-align: right;
+}
+
+figure, iframe {                                                          
+ text-align: center;                                                       
+} 
+
+footer {
+  text-align: center;
+}
+
+.main-text {
+  color: #3c4042; /* Change text color to match body background */
+  background-color: #f5f5dc; /* Change background color to contrast body background */
+  width: 80%;
+  max-width: 800px;
+  margin: 70px auto;  /* Adjusting top margin to account for fixed header */
+  margin-top: 160px;
+  padding: 20px;
+  border-radius: 10px; /* Added for some stylish roundness */
+}
+
+#index .main-text {
+  margin-top: 170
+}
+
+.main-text h2 {
+  margin-bottom: 20px;
+}
+
+.main-text a {
+  color: #d66853;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.main-text a:hover {
+  color: #3c4042;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 600px) {
+  .main-text {
+    width: 100%;
+  }
+}
+
+
+/* HAMBURGER MENU */
+body {
+  /* Your existing styles go here */
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+  background-color: #d66853;
+  padding: 20px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li:hover > ul {
+  display: block;
+}
+
+nav ul ul {
+  display: none;
+  position: absolute;
+  background-color: #d66853;
+}
+
+nav ul ul li {
+  display: block;
+  padding: 10px;
+}
+
+nav a {
+  color: #f5f5dc;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #3c4042;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+  nav ul li {
+    display: block;
+  }
+}
+
