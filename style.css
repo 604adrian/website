@@ -48,13 +48,22 @@ footer a {
 }
 
 /* OTHER STYLES */
+.left {
+  margin-left: auto;
+  margin-right: 0;
+}
+.center {
+  margin 
+}
+.top-of-page {
+  display: inline-block;
+}
 .video {
   position: relative;
   overflow: hidden;
   width: 100%;
   padding-top: 56.25%;    /* for 16:9 aspect ratio used for Youtube videos */
 }
-
 .video iframe {
   position: absolute;
   top:  0;
@@ -64,7 +73,6 @@ footer a {
   border: 0;
 
 }
-
 .internal-links a:hover {
   color: grey;
 }
@@ -255,15 +263,24 @@ nav a:hover {
   font-weight: bold;
 }
 
-/* mobile */
+/* MEDIA ENQUIRIES */
+
+/* to provent mobile menu from being visible on desktop */
+@media screen and (min-width: 601px) {
+ #mobile-menu, #mobile-burger {
+   display: none;
+ }
+}
+
+/* for the mobile site */
 @media screen and (max-width: 600px) {
-  nav ul li {
+ nav ul li {
     display: inline;
   }
   .main-text {
     max-width: 80%;
     margin: auto;
-    margin-top: 87px;
+    margin-top: 55px;
     padding: auto;
     padding-top: 1rem;
   }
@@ -273,6 +290,9 @@ nav a:hover {
   }
   header h1 {
     font-size: 1.4rem;
+    display: inline-block;
+    justify-content: center;
+    text-align: center;
   }
   .tiny-text {
     font-size: 0.7rem;
@@ -287,7 +307,95 @@ nav a:hover {
   #index .main-text h2 {
     font-size: 1.5rem;
   }
-}
+  
+/* mobile menu */
+  /* styling */
+  .hamburger {
+    display: inline-block;
+    align-items: center;
+    position: relative;
+    width: 30px;
+    height: 22px;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+  .hamburger span {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 4px; /* for nice thicc lines */
+    background-color: #333;
+    transition: all 0.3s;
+    left: 0;
+    font-weight: bold; /* bold lines baby */
+  }
+  .hamburger span:nth-child(1) {
+    top: 0;
+    transform: translateY(0) rotate(0);
+  }
+  .hamburger span:nth-child(2) {
+    top: 10px;
+    transform: translate(Y) rotate(0);
+  }
+  .hamburger span:nth-child(3) {
+    top: 20px;
+    transform: translateY(0) rotate(0);
+  }
+  
+  /* transforms hamburger into 'x' icon when clicked */
+  #mobile-burger:checked ~ .hamburger span:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+  }
+  #mobile-burger:checked ~ .hamburger span:nth-child(2) {
+    opacity: 0; /* makes it disappear */
+  }
+  #mobile-burger:checked ~ .hamburger span:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+  }
+
+  /* hide checkbox */
+  #mobile-burger {
+    display: none;
+  }
+
+  /* styling for menu */
+  #mobile-menu {
+    visibility: hidden;
+    opacity: 0;
+    width: 100%;  /* flagging because it might cause issues */
+    position: absolute;
+    top: 30px;
+    left: 0;
+    background-color: #d66853;
+    padding: 20px;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+    transform: translateY(-100%);
+  }
+
+  /* show menu when checked */
+  #mobile-burger:checked ~ #mobile-menu {
+    visibility: visible;    /* make visible when clicked */
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* styles for the links in the menu */
+  #mobile-menu a {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    margin: 10px 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+  }
+
+  /* to get the header out of the way */
+  #desktop-header {
+    /* display: none; */
+  }
+ }
 
 /* for images on mobile */
 img, embed, iframe, object, video {
