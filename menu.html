@@ -1,30 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <title>dialetheism ftw</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+<style>
+input[type='checkbox'] {
+  display: none;
+}
+
+label {
+  display: block;
+  background-color: #777;
+  color: white;
+  padding: 10px;
+  width: 200px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+input[type='checkbox']:checked + label + .content {
+  max-height: 100vh;
+  overflow: auto;
+}
+
+.content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s;
+  background-color: #f1f1f1;
+  padding: 10px;
+}
+</style>
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="#">Menu</a>
-          <ul>
-            <li><a href="./about.html">About</a></li>
-            <li><a href="./why.html">Why dialetheism?</a></li>
-            <li><a href="./math.html">Inconsistent mathematics</a></li>
-            <li><a href="./summary.html">A summary</a></li>
-            <li><a href="./obama.html">Mic drop</a></li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
-  </header>
-  <div class="main-text">
-    <!-- Your content goes here -->
-  </div>
+
+<input type="checkbox" id="question1">
+<label for="question1">Question 1</label>
+<div class="content">
+  <p>Answer 1</p>
+</div>
+
+<input type="checkbox" id="question2">
+<label for="question2">Question 2</label>
+<div class="content">
+  <p>Answer 2</p>
+</div>
+
 </body>
 </html>
 

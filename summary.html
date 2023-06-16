@@ -9,6 +9,28 @@
     </head>
     <body id="summary">
     <header>
+      <!--- MOBILE MENU --->
+      <input type="checkbox" id="mobile-burger">
+
+      <!--- hamburger icon --->
+      <label class="hamburger" for="mobile-burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <!--- menu --->
+      <div id="mobile-menu">
+        <hr>
+        <a href="about.html">About</a>
+        <hr>
+        <a href="why.html">But..why?</a>
+        <hr>
+        <a href="summary.html">Summary</a>
+        <hr>
+      </div>
+
+      <!--- DESKTOP MENU --->
       <nav id="desktop-menu">
         <ul>
           <li><a href="#">Menu</a>
@@ -19,9 +41,13 @@
             </ul>
           </li>
         </nav>
-    <h1>To sum it up...</h1>
+
+    <h1 id="desktop-header">To sum it up...</h1>
+
    </header>
    <div class="main-text">
+     <h2 id="mobile-h2">To sum it up...</h2>
+     <p>The <strong>TL;DR</strong> of this website is:</p>
      <ul>
 	 	   <li><a class="internal-link" href="math.html">Impossible shapes</a> are cool.</li>
          <li>Some sentences are both true and false.</li>
