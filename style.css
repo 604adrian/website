@@ -282,6 +282,9 @@ nav a:hover {
    padding-top: 20px;
    padding-bottom: 15px;
  }
+ #index .main-text {
+   margin-top: 150px;
+ }
 }
 
 /* for the mobile site */
