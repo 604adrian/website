@@ -4,4 +4,4 @@ This website is made so that I can learn HTML and CSS. I just finished a philoso
 
 Dialetheism is a radical rejection of [classical logic](https://plato.stanford.edu/entries/logic-classical/), opposing the standard and oppressive view that all contradictions are false. You can join the resistance movement against classical logic by visiting this website and annoying your family in friends with long-winded rants about the evils of hyper-consistency in our formal systems.
 
-Go to [the website](https://604adrian.github.io)
+Go to [the website](https://604adrian.github.io/website/).
