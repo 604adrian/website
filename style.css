@@ -33,8 +33,12 @@ header a {
 h2 {
   text-align: center;
 }
-
-#why figure, iframe {                                              text-align: center;                                               display: flex;
+#index .main-text {
+  margin-top: 125px;
+}
+#why figure, iframe {                                              
+ text-align: center;                                               
+ display: flex;
  justify-content: center;
 }
 footer {
